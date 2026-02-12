@@ -1,23 +1,31 @@
+document.addEventListener("DOMContentLoaded", function () {
+    show_date_time();
+});
 
-function star() {
-    setTimeout(function () {
-    }, 3000);
-}
 function show_date_time() {
-    window.setTimeout("show_date_time()", 1000);
-    BirthDay = new Date("2023/08/06");
-    today = new Date();
-    timeold = (today.getTime() - BirthDay.getTime());
-    sectimeold = timeold / 1000
-    secondsold = Math.floor(sectimeold);
-    msPerDay = 24 * 60 * 60 * 1000
-    e_daysold = timeold / msPerDay
-    daysold = Math.floor(e_daysold);
-    e_hrsold = (daysold - e_daysold) * -24;
-    hrsold = Math.floor(e_hrsold);
-    e_minsold = (hrsold - e_hrsold) * -60;
-    minsold = Math.floor((hrsold - e_hrsold) * -60);
-    seconds = Math.floor((minsold - e_minsold) * -60);
-    momk.innerHTML = daysold + " ngày " + hrsold + " giờ " + minsold + " phút " + seconds + " giây";
+
+    // 👉 Đổi ngày ở đây nếu muốn
+    const BirthDay = new Date("2023-08-06T00:00:00");
+    const today = new Date();
+
+    const timeDiff = today - BirthDay;
+
+    const totalSeconds = Math.floor(timeDiff / 1000);
+
+    const days = Math.floor(totalSeconds / (24 * 60 * 60));
+    const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+    const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+    const seconds = totalSeconds % 60;
+
+    const momk = document.getElementById("momk");
+
+    if (momk) {
+        momk.innerHTML =
+            days + " ngày " +
+            hours + " giờ " +
+            minutes + " phút " +
+            seconds + " giây";
+    }
+
+    setTimeout(show_date_time, 1000);
 }
-show_date_time();
