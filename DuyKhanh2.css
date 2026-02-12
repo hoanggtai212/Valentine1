@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+body {
+    position: relative;
+    scroll-behaviour: smooth;
+    font-family: ZCOOL QingKe HuangYou;
+    background: black
+}
+
+.Border {
+    font-size: 12px;
+    position: relative;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+    background-color: #222;
+    text-align: center;
+    background-color: BLACK;
+    padding: 0px;
+    margin: 8px;
+    border-style: double;
+    border-radius: 10px;
+    border-color: #ccc;
+    border-width: 2px;
+    animation-name: bodyborder;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: right
+}
+
+.BlurWebs {
+    animation: blur 3s linear 1 0s forwards
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 15px
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ffbc;
+    border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00ffbc
+}
+
+.MangXaHoiFtDuyKhanh div {
+    border: 2px solid white;
+    border-radius: 7px;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    width: 63%;
+    height: 5%;
+    margin: auto ;
+    font-size: 18px;
+    transition: 0.5s;
+    text-align: center;
+    text-shadow: -1px 0 5px CYAN, 0 1px 5px RED, 1px 0 5px CYAN, 0 -1px 5px RED
+
+}
+
+.MangXaHoiFtDuyKhanh:after {
+    content: "";
+    clear: both;
+    display: table
+}
+
+.MangXaHoiFtDuyKhanh div:not(:last-child) {
+    border-right: none
+}
+
+.MangXaHoiFtDuyKhanh div:hover {
+    transform: translateY(-3px);
+    transition: 0.5s
+}
+
+/* 1. Tạo hiệu ứng chuyển động cho màu nền */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 2. Cấu hình chung cho các nút (đỡ phải viết lại nhiều lần) */
+.TikTok, .Facebook, .Instagram, .Telegram {
+    position: relative;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin: 10px; /* Gom gọn margin */
+    padding: 10px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    
+    /* Màu chữ nên là màu trắng để nổi bật trên nền màu đậm */
+    color: #ffffff !important; 
+    font-weight: bold;
+    
+    /* Kích thước nền lớn hơn để tạo hiệu ứng trôi */
+    background-size: 200% 200%;
+    /* Thời gian chuyển màu: 3 giây, lặp lại vô hạn */
+    animation: gradientAnimation 3s ease infinite;
+    
+    /* Border nhẹ cho đẹp (tùy chọn) */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ---------------------------------------------------- */
+/* 3. Màu sắc riêng cho từng thương hiệu */
+/* ---------------------------------------------------- */
+
+/* TIKTOK: Màu Đen pha chút hiệu ứng Glitch (Xanh Cyan + Đỏ Hồng) */
+.TikTok {
+    background-image: linear-gradient(45deg, #000000, #25F4EE, #FE2C55, #000000);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* FACEBOOK: Các sắc thái màu Xanh dương chuẩn Meta */
+.Facebook { 
+    background-image: linear-gradient(45deg, #1877F2, #3b5998, #00C6FF);
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
+}
+
+/* GITHUB (Class cũ là .Instagram): Tông màu Đen - Xám đậm - Tím nhạt */
+.Instagram {
+    background-image: linear-gradient(45deg, #161b22, #24292e, #414b56, #6e5494);
+    box-shadow: 0 4px 15px rgba(36, 41, 46, 0.3);
+}
+
+/* YOUTUBE (Class cũ là .Telegram): Tông màu Đỏ tươi - Đỏ đậm */
+.Telegram {
+    background-image: linear-gradient(45deg, #FF0000, #c4302b, #ff4b4b);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.ThongTinThanhToan {
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #252525;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 1px #555;
+    color: #ffffff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 7px 3px #33FFFF
+}
+
+.ThongTinThanhToan:hover {
+    background-color: #353535;
+    box-shadow: 0 2px 2px 1px #555;
+    transform: scale(0.95);
+    border-radius: 2px;
+    box-shadow: 0 0 7px 3px #33FFFF
+}
+
+.ThongTinThanhToanTitle {
+    padding: 0 0;
+    margin: 0 0;
+    font-size: 23px;
+    font-weight: 700;
+    color: #00FFFF
+}
+
+.ThongTinThanhToanText {
+    padding: 0 0;
+    margin: 5 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #00CC33;
+    margin-top: 5px
+}
+
+.Blob {
+    background: black;
+    border-radius: 50%;
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    background: #111845a6;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 0 10px 1px #FFFFFF;
+    animation: blur 3s linear 1 0s forwards;
+    animation: pulse 3s infinite
+}
+
+.NameFtDuyKhanh {
+    color: #FFFFFF;
+    padding: 0;
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 0;
+    text-shadow: -1px 0 5px CYAN, 0 1px 5px RED, 1px 0 5px CYAN, 0 -1px 5px RED
+}
+
+.TieuSu {
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: -1px 0 5px CYAN, 0 1px 5px RED, 1px 0 5px CYAN, 0 -1px 5px RED
+}
+
+hr.ThanhGachNgang {
+    border: 0.5px solid #FFFFFF;
+    border-style: double;
+    margin-left: 20px;
+    margin-right: 20px
+}
+
+.Trang {
+    color: white;
+    -webkit-mask: linear-gradient(-60deg, white 30%, #0004, white 70%)right/300% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 1s infinite
+}
+
+.Cuoi {
+    padding: 40px 0;
+    color: #ffffff
+}
+
+.Footer .DuyKhanhFtCopyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    color: #aaa;
+    margin-bottom: 0
+}
+
+.rainbow {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #aaa;
+    margin-bottom: 0;
+    animation: colorRotate 2.5s linear 0s infinite
+}
+
+@keyframes colorRotate {
+    from {
+        color: #FFFFFF
+    }
+    10% {
+        color: #FF0000
+    }
+    30% {
+        color: #00FF00
+    }
+    45% {
+        color: #0000FF
+    }
+    55% {
+        color: #FFFF00
+    }
+    65% {
+        color: #00FFFF
+    }
+    75% {
+        color: #00FF00
+    }
+    85% {
+        color: #0000FF
+    }
+    100% {
+        color: #FF66CC
+    }
+}
+
+/*clockkkkkkkkkkkkkkkkkkk*/
+body {
+  background-color: #fff;
+}
+#currentTime {
+  font-size: 19px;
+  text-align: center;
+  font-family: Orbitron;
+  font-weight: 600;
+  color: #17D4FE;
+  margin: 10px;
+  line-height: 2.3;
+}
+button {
+  text-decoration: none;
+  position: relative;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: #fff;
+  width: 4em;
+  height: 1.5em;
+  line-height: 1em;
+  text-align: center;
+  background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  background-size: 300%;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+button:hover {
+  animation: ani 8s linear infinite;
+  border: none;
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+}
+
+.btn:hover::before {
+  filter: blur(20px);
+}
+
+.btn:active {
+  background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+}
+
+.button1 {
+  
+   background-color:#32d0f0; border-color:#32d0f0;
+   text-align: center;
+    color:white;padding: 16px 36x;font-size:14px
+}
+.Topnav {
+    overflow: hidden
+}
+
+.Topnav a {
+    font-family: 'ZCOOL QingKe HuangYou';
+    float: left;
+    display: block;
+    color: pink;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent
+}
+
+.Topnav a:hover {
+    border-bottom: 3px solid #00ffff;
+    margin-left: 2px;
+    transition: 0.5s
+}
+
+.Topnav a.Active {
+    border-bottom: 3px solid #00ff00;
+    margin-left: 5px
+}
+
+#Toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: gold;
+    text-align: center;
+    border-radius: 50px;
+    border: 3px solid green;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 35px;
+    font-size: 20px
+}
+
+#Toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 2.0s, fadeout .2.0s 2.0s;
+    animation: fadein 2.0s, fadeout 2.0s 2.0s
+}
+
+.NoScript {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    margin: 20px;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 3px double cyan;
+    background-color: #252525;
+    color: #fff
+}
+.color1 {
+  background-color: rgb(107, 255, 15);
+}
+
+.color2 {
+  background-color: rgb(249, 123, 139);
+}
+
+.color3 {
+  background-color: rgb(108, 108, 229);
+}
+.color4 {
+  background-color: rgb(249, 215, 76);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.skills {
+
+}
+
+.skill-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+
+.skill {
+  width: 60%;
+  max-width: 520px;
+  padding: 0 20px;
+}
+
+.skill-name {
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: -1px 0 5px white, 
+  0 1px 5px white;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  margin: 15px 0;
+}
+
+.skill-bar {
+  height: 12px;
+  background: #cccccc;
+  border-radius: 8px;
+}
+
+.skill-per {
+  height: 12px;
+  border-radius: 8px;
+  width: 0;
+  transition: 1s linear;
+  position: relative;
+}
+
+.skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background-color: #454360;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #454360;
+  top: -16px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.99)
+    }
+    50% {
+        transform: scale(1.1)
+    }
+    100% {
+        transform: scale(0.99)
+    }
+}
+
+@keyframes bodyborder {
+    20% {
+        border-color: cyan
+    }
+    40% {
+        border-color: lime
+    }
+    60% {
+        border-color: red
+    }
+    80% {
+        border-color: yellow
+    }
+    90% {
+        border-color: orange
+    }
+}
+
+@keyframes shimmer {
+    100% {
+        -webkit-mask-position: left
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0
+    }
+    to {
+        bottom: 35px;
+        opacity: 1
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0
+    }
+    to {
+        bottom: 35px;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 35px;
+        opacity: 1
+    }
+    to {
+        bottom: 0;
+        opacity: 0
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 35px;
+        opacity: 1
+    }
+    to {
+        bottom: 0;
+        opacity: 0
+    }
+}
+
+@keyframes blur {
+    from {
+        opacity: 0;
+        filter: blur(3px)
+    }
+    to {
+        opacity: 1;
+        filter: blur(0px)
+    }
+}
+
+@keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px
+    }
+    50% {
+        background-position: 500px 500px, 100px 200px, -100px 150px
+    }
+    100% {
+        background-position: 500px 1000px, 200px 400px, -100px 300px
+    }
+}
