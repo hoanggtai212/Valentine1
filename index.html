@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/d/1JXrKRQvrm2t6fYXkqu4Y8RQHUxm0gmoI" type="image/x-icon">
+    <title>DuyKhanh | Profile</title>
+    <link rel="stylesheet" href="assets/DuyKhanh1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="assets/DuyKhanh2.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name="author" content="Đây Là Website Của DUYKHANH-Dev, Rất Mong Được Chào Đón Bạn !">
+    <meta property="og:title" content="HELLO EVERYONE !">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sub.com">
+    <meta property="og:image" content="http://thanhdieu.com/files/thanhdieugirl.jpg">
+    <meta property="og:image:width" content="120">
+    <meta property="og:image:height" content="120">
+    <meta property="og:site_name" content="DuyKhanh06">
+    <meta name="theme-color" content="#00FFFF" />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' type='text/javascript'></script>
+
+    <style>
+        /* [FIX LỖI BỊ ĐÈ] Tạo một lớp nền riêng biệt nằm dưới cùng */
+        #background-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -9999; /* Đảm bảo nằm dưới tất cả mọi thứ */
+            
+            /* Thay link ảnh của bạn vào đây */
+            background-image: url('LINK_ANH_CUA_BAN.jpg');
+            
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Lớp phủ mờ nằm đè lên ảnh nền nhưng nằm dưới nội dung web */
+        .overlay-dim {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Màu đen mờ 50% */
+            z-index: -9998; /* Nằm ngay trên ảnh nền */
+        }
+
+        /* Đảm bảo nội dung chính nổi lên trên */
+        .BlurWebs {
+            position: relative;
+            z-index: 1; 
+        }
+    </style>
+</head>
+
+<body class="Border" onLoad="onCreate()">
+
+    <div id="background-layer"></div> <div class="overlay-dim"></div>   <div class="BlurWebs">
+       <div class="Topnav">
+    <a class="Active">HOME</a>
+    
+    <a style="color:cyan;">
+        <span id="fps">144.0</span> FPS
+    </a>
+
+    <a style="float: right; color: #f1c40f; cursor: default; min-width: 160px; text-align: right; transition: all 0.5s;">
+    <i class="fas fa-temperature-high"></i> 
+    
+    <span id="weather_loc" style="color: #00FFFF; margin-right: 5px;">...</span>: 
+    
+    <span id="weather_temp" style="display: inline-block; min-width: 20px; transition: opacity 0.3s;">--</span>
+</a>
+</div>
+        
+        </div>
+        <br>
+        <!-- ===== ❀ NƠI EDIT AVATAR ❀ ===== -->
+        <p align="center">
+            <img class="Blob" src="https://lh3.googleusercontent.com/d/1JXrKRQvrm2t6fYXkqu4Y8RQHUxm0gmoI" width="96" height="96" alpha="@DuyKhanh@"></p>
+        <h2 class="NameFtDuyKhanh" align="center">
+            Duy Khánh <i class="fa fa-check-circle"></i></h2>
+        <h2 class="TieuSu">                                <span class="contentLetter"></span>             </h2>
+        <br>
+        <strong style="color: rgb(255, 238, 0); font-size: 19px; font-family: 'Rowdies';">Your Info <a id="checkip_address">Loading your address....</a>
+          <br/>
+          </strong>
+        <strong  style="color: rgb(255, 0, 0); font-size: 20px; font-family: 'Rowdies';">Date Created:</strong>
+      <span style="color: rgb(0, 240, 120);
+        animation: colorRotate 2.5s linear 0s infinite;
+        @keyframes colorRotate {
+            from {
+              color: #FF0000;
+            }
+            10% {
+              color: #00FFFF;
+            }
+            50% {
+              color: #00FF00;
+            }
+             100% {
+              color: #FFFF00;
+            }
+          } font-size: 16px; font-family: 'Rowdies';" id="momk"></span>
+      <script type="text/javascript" src="./javascript/time-activated.js"></script>
+      </strong>
+      <br>
+        <hr class="New"><br>
+        <!-- Thông Tin Liên Hệ -->
+        <h2 class="NameFtDuyKhanh">
+            Social Network
+        </h2>
+        <ul class="icons">
+            <br>
+            <div class="MangXaHoiFtDuyKhanh">
+    <a id="TikTok" onClick="TikTok()">
+        <div class="TikTok">
+            <i class="fab fa-tiktok"></i> TikTok
+        </div>
+    </a>
+    
+    <a id="Facebook" onClick="Facebook()">
+        <div class="Facebook">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </div>
+    </a>
+    
+    <a id="Instagram" onClick="Instagram()">
+        <div class="Instagram">
+            <i class="fab fa-github"></i> Github
+        </div>
+    </a>
+    
+    <a id="Telegram" onClick="Telegram()">
+        <div class="Telegram">
+            <i class="fab fa-youtube"></i> YouTube
+        </div>
+    </a>
+</div>
+                </a>
+                <br>
+            </div>
+            <br>
+            <hr class="New"><br>
+            <!-- ===== Thông Tin Thanh Toán - Có Thể Thêm Đoạn Văn Bản Giới Thiệu Ngắn Về Bản Thân  <button> <i class="fa fa-clone"></button> ===== -->
+            <div class="NameFtDuyKhanh">
+                <h2>DV MXH</h2>
+            </div>
+            <div class="ThongTinThanhToan">
+                <p class="ThongTinThanhToanTitle">HOÀN TIỀN CHPLAY, APPSTORE</p>
+                <p class="ThongTinThanhToanText">Hỗ trợ hoàn tiền giao dịch tự động siêu nhanh, tỷ lệ thành công cao</p>
+            </div>
+            <br>
+            <div class="ThongTinThanhToan">
+                <p class="ThongTinThanhToanTitle">TĂNG TƯƠNG TÁC MXH</p>
+                <p class="ThongTinThanhToanText">Tăng tương tác toàn diện cho mọi nền tảng MXH</p>
+            </div>
+            <br>
+            <div class="ThongTinThanhToan">
+                <p class="ThongTinThanhToanTitle">CRACK WINDOW</p>
+                <p class="ThongTinThanhToanText">Active Win,Office,...vv</p>
+            </div>
+            <br>
+            <br>
+            <hr class="ThanhGachNgang">
+            <br>
+            <br>
+    <section id="skills">
+      <div class="NameFtDuyKhanh" class="container skills">
+        <div class="row">
+          <Skills class="col-12">
+            <u class="NameFtDuyKhanh">- Skill Language -<br/>
+            </u>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="skill-box">
+          <div class="skill">
+            <div class="skill-name">HTML/CSS</div>
+            <div class="skill-bar">
+              <div class="skill-per color1" per="76"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">MySql</div>
+            <div class="skill-bar">
+              <div class="skill-per color2" per="9"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="skill-box">
+          <div class="skill">
+            <div class="skill-name">Lua</div>
+            <div class="skill-bar">
+              <div class="skill-per color3" per="68"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">PHP</div>
+            <div class="skill-bar">
+              <div class="skill-per color4" per="12"></div>
+              <script>
+            $('.skill-per').each(function() {
+  var $this = $(this);
+  var per = $this.attr('per');
+  
+  // Xóa dòng set width ngay lập tức ở đây
+  // $this.css("width", per + '%'); 
+
+  $({
+    animatedValue: 0
+  }).animate({
+    animatedValue: per
+  }, {
+    duration: 3000, // Đã giảm xuống 3000ms (3s) để dễ nhìn hơn. 15000ms rất chậm.
+    step: function() {
+      // Cập nhật độ rộng thanh trong mỗi bước chạy
+      $this.css("width", Math.floor(this.animatedValue) + '%');
+      
+      // Cập nhật thuộc tính hiển thị số (nếu bạn dùng CSS attr() để hiện số)
+      $this.attr('per', Math.floor(this.animatedValue) + '%');
+    },
+    complete: function() {
+      // Đảm bảo kết thúc chính xác
+      $this.css("width", per + '%');
+      $this.attr('per', per + '%');
+    }
+  });
+});
+</script>
+      </ul>
+             <br>
+            <!-- ===== Thanh Gạch Ngang ===== -->
+            <hr class="ThanhGachNgang">
+            <footer class="Cuoi Trang">
+                <p class="DuyKhanhFtCopyright">
+                    <!-- ===== Thông điệp cuối cùng cho người xem ===== -->
+                    <p class="rainbow" class="copyright">Created by
+                        <a style="text-decoration: none;" class="copyright" href="https://www.facebook.com/profile.php?id=100084065153231&mibextid=ZbWKwL">
+                            <font class="rainbow" color="white"> DuyKhanh</font>
+                        </a>
+                        <br> <strong>All rights reserved - © 2025 </strong></p>
+            </footer>
+    </div>
+<head>
+ <style>
+  .notification {
+    /* Căn giữa màn hình */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Giao diện cơ bản */
+    background-color: #6d756f;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Bo tròn góc cho đẹp hơn */
+    padding: 20px;
+    text-align: center;
+    line-height: 1.5;
+    color: #65d93b;
+    
+    /* QUAN TRỌNG: Cấu hình responsive (Thích ứng) */
+    box-sizing: border-box; /* Để padding không làm vỡ kích thước */
+    width: 90%;             /* Trên điện thoại sẽ chiếm 90% chiều ngang */
+    max-width: 450px;       /* Trên máy tính chỉ rộng tối đa 450px */
+    z-index: 9999;          /* Đảm bảo luôn nổi trên cùng */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Thêm bóng đổ để nổi bật */
+    
+    /* Cỡ chữ mặc định (Máy tính) */
+    font-size: 25px;
+    
+    /* Animation */
+    animation: rainbow 2.5s infinite linear;
+  }
+
+  /* MEDIA QUERY: Điều chỉnh riêng cho điện thoại (Màn hình < 600px) */
+  @media (max-width: 600px) {
+    .notification {
+      font-size: 18px; /* Giảm cỡ chữ trên điện thoại cho gọn */
+      padding: 15px;
+      width: 95%;      /* Mở rộng thêm một chút trên đt quá nhỏ */
+    }
+  }
+
+  /* Sửa lỗi cú pháp keyframes */
+  @keyframes rainbow {
+    0%   { color: red; }
+    14%  { color: orange; }
+    28%  { color: yellow; }
+    42%  { color: green; }
+    57%  { color: blue; }
+    71%  { color: indigo; } /* Đã thêm dấu đóng ngoặc bị thiếu */
+    85%  { color: violet; }
+    100% { color: red; }
+  }
+</style>
+</head>
+<body>
+    <div id="notification" class="notification">
+        <h2>Notification!</h2>
+        <p>Welcome to Duy Khanh's website</p>
+        <button class="button1" onclick="hideNotification()">Click here</button>
+    </div>
+
+    <audio id="myAudio"></audio>
+</body>
+
+    <div id="Toast">Designed by DuyKhanh :))</div>
+    <script type="text/javascript" src="./javascript/index.js"></script>
+    <script type="text/javascript">
+        var fps = document.getElementById("fps");
+        var startTime = Date.now();
+        var frame = 0;
+
+        function tick() {
+            var time = Date.now();
+            frame++;
+            if (time - startTime > 1000) {
+                fps.innerHTML = (frame / ((time - startTime) / 1000)).toFixed(1);
+                startTime = time;
+                frame = 0;
+            }
+            window.requestAnimationFrame(tick);
+        }
+        tick();
+    </script>
+</body>
+</html>
